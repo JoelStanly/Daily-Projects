@@ -1,0 +1,72 @@
+body{
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    background-color: #71a2ff;
+}
+
+.circle{
+    min-width: 100px;
+    min-height: 100px;
+    background-color: #e6e6e6;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    color:#71a2ff;
+    font-family: "Source Sans Pro",sans-serif;
+    font-size: xx-large;
+}
+
+.text{
+    z-index: 1000;
+    transition: color 1s;
+}
+
+.blobby{
+    min-width: 100px;
+    min-height: 100px;
+    border-radius: 50%;
+    position:absolute;
+    overflow: hidden;
+}
+.blob{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+}
+.blob:nth-child(1){
+    height: 250px;
+    width: 250px;
+    transform: translate(-170px,30px) rotate(30deg);
+    transition: transform 1s;
+    
+}
+.blob:nth-child(2){
+    transform: translate(-150px,60px) rotate(40deg);
+    transition: transform .9s;
+    transition-delay: 0.02s;
+}
+.blob:nth-child(3){
+    transform: translate(-180px,80px) rotate(-80deg);
+    transition: transform 1.3s;
+    transition-delay: 0.05s;
+}
+
+.circle:hover .blob:nth-child(1){
+    transform: translate(-110px,-90px) rotate(30deg);
+}
+
+.circle:hover .blob:nth-child(2){
+    transform: translate(-90px,-40px) rotate(10deg);
+}
+
+.circle:hover .blob:nth-child(3){
+    transform: translate(-110px,10px) rotate(-70deg);
+}
+
+.circle:hover .text{
+    color:#ffffff;
+}
