@@ -1,0 +1,87 @@
+body{
+    display: flex;
+    height:100vh;
+    overflow:hidden;
+    justify-content: center;
+    align-items:center;
+    background-color: rgb(4, 0, 36);
+}
+
+.wrap{
+    position: relative;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #0a0a0a;    
+    overflow:hidden;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.fillup{
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #33fc76;
+    transform: translate(0,101%);
+}
+rect{
+    fill: rgb(255, 255, 255);
+}
+.left,.right{
+    transition: opacity 0.1s;
+}
+
+.tick{
+    position:absolute;
+    width: 25px;
+    opacity: 0;
+}
+
+.wrap:hover .right,.wrap:hover .left{
+    opacity: 0;
+}
+
+.wrap:hover .arrow{
+    animation: move 2s ease-in-out forwards;
+}
+.wrap:hover .fillup{
+    animation: fill 1s 1s ease-in-out forwards;
+}
+
+.wrap:hover .tick{
+    animation: opaci 0.1s 2s forwards;
+}
+
+@keyframes opaci{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes move {
+    0%{
+        transform: translate(0,0);
+    }
+    50%{
+        transform: translate(0px,30px);
+    }
+    99%{
+        transform: translate(0px,-46px);
+    }
+    100%{
+        transform: translate(0px,-50px);
+    }
+}
+@keyframes fill {
+    0%{
+        transform: translate(0,101%);
+    }
+    100%{
+        transform: translate(0,0);
+    }
+}
