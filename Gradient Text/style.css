@@ -1,0 +1,17 @@
+body{
+    display: flex;
+    height:100vh;
+    overflow:hidden;
+    justify-content: center;
+    align-items:center;
+    background-color: rgb(15, 15, 15);
+}
+
+.text{
+    font-family: Helvetica, sans-serif;
+    font-size: 72px;
+    font-weight: bolder;
+    background: -webkit-linear-gradient(45deg,rgb(160, 43, 43), rgb(4, 0, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
