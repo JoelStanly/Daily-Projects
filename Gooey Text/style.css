@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000;
+}
+
+.container {
+    position: relative;
+    padding: 4em;
+    filter: contrast(20);
+    background-color: black;
+    overflow: hidden;
+}
+
+h1{
+    color: #fff;
+    font-size: 8rem;
+    font-weight: 700;
+    line-height: 1;
+    animation: moving 2.5s infinite alternate-reverse;
+}
+
+@keyframes moving {
+    0%{
+        letter-spacing: -3rem;
+        filter: blur(1.2rem);
+    }
+    100%{
+        letter-spacing: 0rem;
+        filter: blur(0rem);
+    }
+}
