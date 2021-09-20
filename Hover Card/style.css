@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(142, 119, 243);
+}
+
+.container{
+    border-radius: 5px;
+    position: relative;
+    background: rgb(188, 176, 241);
+    height: 200px;
+    width: 400px;
+    box-shadow: 0 5px 45px rgba(0, 0, 0,0.5);
+    overflow: hidden;
+    transition: background 0.7s ease-in-out;
+}
+
+.card{
+    position: relative;
+    background-image: url('image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 200px;
+}
+
+.text{
+    position: absolute;
+    color: #fff;
+    bottom: 0px;
+    right: 30%;
+    font-size: 56px;
+    font-weight: 900;
+    font-style: italic;
+    text-shadow: 5px 1px rgb(26, 26, 26);
+    transition: right .9s ease-in-out;
+    z-index: 1000;
+}
+
+.right{
+    position: absolute;
+    color: rgb(54, 54, 54);
+    transform: translate(280px,200%) rotate(90deg);
+    font-weight: lighter;
+    font-size: 12px;
+    transition: color 0.9s ease-in-out;
+    z-index: 200;
+}
+
+.media{
+    position: absolute;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    transform: translate(0,-100%);
+    transition: transform 1s ease-in-out;
+}
+li{
+    margin: 10px 8px;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+a:hover{
+    color: #f33f3f;
+}
+.circle{
+    background: #f33f3f;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    transform-origin: center;
+    transition: opacity 0.8s ease-in-out, transform 0.7s ease-in-out;
+}
+
+.container:hover{
+    background: rgb(255, 145, 0);
+}
+
+.container:hover .text{
+    right: -10px;
+}
+
+.container:hover .right{
+    color: rgb(255, 255, 255);
+}
+
+.container:hover .media{
+    transform: translate(0,0);
+}
+
+.container:hover .circle{
+    transform: scale(10);
+    opacity: 0.5;
+}
