@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(119, 243, 191);
+}
+.container .image {
+    float: left;
+    width: 50px;
+    height: 200px;
+    margin: 0px;
+    background: url(image.jpg) no-repeat 0 0 fixed;
+    transition: transform 0.5s ease-in-out,margin 0.3s ease-in-out;
+}
+
+.container:hover .image{
+    margin: 0 3px;
+    transform: skewX(20deg);
+}
