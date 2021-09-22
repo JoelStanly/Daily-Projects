@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000;
+}
+
+h2{
+    font-weight:800;
+    font-size: 4em;
+    color: #111;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+h2 span{
+    transition: 0.5s;
+}
+
+h2:hover span:nth-child(1){
+    margin-right: 5px;
+}
+h2:hover span:nth-child(2){
+    margin-left: 5px;
+}
+
+h2:hover span{
+    color: #fff;
+    text-shadow: 0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #fff,
+                0 0 80px #fff,
+                0 0 120px #fff,
+                0 0 160px #fff;
+}
